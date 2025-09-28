@@ -1,0 +1,72 @@
+# Project Configuration for Kanban Board
+# This file serves as documentation for setting up the GitHub Project
+
+project_name: "Kanban Board"
+project_description: "Main project board for tracking all work using Kanban methodology"
+
+columns:
+  - name: "Backlog"
+    description: "Ideas and future tasks that haven't been prioritized yet"
+    automation: "none"
+    
+  - name: "To Do"
+    description: "Prioritized tasks ready to be worked on"
+    automation: 
+      - "newly_added_issues"
+      - "reopened_issues"
+    
+  - name: "In Progress"
+    description: "Tasks currently being worked on"
+    automation: "none"
+    wip_limit: 3
+    
+  - name: "In Review"
+    description: "Tasks completed and awaiting review/testing"
+    automation:
+      - "newly_added_pull_requests"
+    wip_limit: 5
+    
+  - name: "Done"
+    description: "Completed and verified tasks"
+    automation:
+      - "closed_issues"
+      - "merged_pull_requests"
+
+labels:
+  priority:
+    - name: "priority-high"
+      color: "d73a4a"
+    - name: "priority-medium"
+      color: "fbca04"
+    - name: "priority-low"
+      color: "0075ca"
+      
+  type:
+    - name: "user-story"
+      color: "7057ff"
+    - name: "task"
+      color: "a2eeef"
+    - name: "bug"
+      color: "d73a4a"
+    - name: "enhancement"
+      color: "84b6eb"
+      
+  status:
+    - name: "blocked"
+      color: "b60205"
+    - name: "needs-info"
+      color: "d4c5f9"
+    - name: "ready-for-review"
+      color: "0e8a16"
+      
+  estimation:
+    - name: "1-point"
+      color: "c2e0c6"
+    - name: "2-points"
+      color: "bfd4f2"
+    - name: "3-points"
+      color: "f9d0c4"
+    - name: "5-points"
+      color: "fef2c0"
+    - name: "8-points"
+      color: "f7c6c7"
