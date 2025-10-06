@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Kanban Board
+    url: https://github.com/drOluOla/Lloyds_DA_AI_Scientist_Take_Home/projects
+    about: View the project kanban board to track progress
+  - name: Project Documentation
+    url: https://github.com/drOluOla/Lloyds_DA_AI_Scientist_Take_Home/blob/main/README.md#kanban-workflow
+    about: Learn about our kanban workflow and project management process
